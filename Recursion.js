@@ -20,3 +20,16 @@ function print1ton(num){
 }
 
 print1ton(5)
+
+// Sum of N digits
+
+function sumofn(num){
+  if(num === 0){
+    return 0
+  }
+	
+  return num + sumofn(num-1)
+  
+}
+
+console.log(sumofn(5))
