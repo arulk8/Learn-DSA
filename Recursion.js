@@ -49,3 +49,15 @@ function Factorial(num){
   return num * Factorial(num-1)
 }
 console.log(Factorial(5))
+
+// product of digits
+function productOfDigits(num){
+	if(num == 0){
+  	return 1
+  }
+  const n = num % 10
+  const rem = Math.floor(num / 10)
+  return n*productOfDigits(rem)
+}
+
+console.log(productOfDigits(657))
