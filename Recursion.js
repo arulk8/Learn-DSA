@@ -78,15 +78,12 @@ reverseNumber(657)
 console.log(sum)
 // 2.
 function reverseNumber(num){
-	if(num === 0){
-  	return 0
+	if(num%10 === num){
+  return num
   }
   const n = num % 10
   const rem = Math.floor(num / 10)
   const digit = Math.floor(Math.log10(rem)) + 1
-  if(digit === -Infinity){
-  	return n
-  }
   
   return (n*Math.pow(10,digit)) + reverseNumber(rem)
 }
