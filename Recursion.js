@@ -22,14 +22,22 @@ function print1ton(num){
 print1ton(5)
 
 // Sum of N digits
-
 function sumofn(num){
   if(num === 0){
     return 0
   }
-	
   return num + sumofn(num-1)
-  
+}
+console.log(sumofn(5))
+
+// Sum of digits
+function sumofDigits(num){
+  if(num === 0){
+    return 0
+  }
+  const digit = num % 10
+  const rem = Math.floor(num/10)
+  return digit + sumofDigits(rem)
 }
 
-console.log(sumofn(5))
+console.log(sumofDigits(54321))
