@@ -61,3 +61,34 @@ function productOfDigits(num){
 }
 
 console.log(productOfDigits(657))
+
+// Reverse digit
+// 1.
+let sum= 0;
+function reverseNumber(num){
+	if(num === 0){
+  	return 0
+  }
+  const n = num % 10
+  sum = sum*10 + n
+  const rem = Math.floor(num / 10)
+reverseNumber(rem)
+}
+reverseNumber(657)
+console.log(sum)
+// 2.
+function reverseNumber(num){
+	if(num === 0){
+  	return 0
+  }
+  const n = num % 10
+  const rem = Math.floor(num / 10)
+  const digit = Math.floor(Math.log10(rem)) + 1
+  if(digit === -Infinity){
+  	return n
+  }
+  
+  return (n*Math.pow(10,digit)) + reverseNumber(rem)
+}
+
+console.log(reverseNumber(657))
