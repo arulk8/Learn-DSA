@@ -39,5 +39,13 @@ function sumofDigits(num){
   const rem = Math.floor(num/10)
   return digit + sumofDigits(rem)
 }
-
 console.log(sumofDigits(54321))
+
+// Factorial 
+function Factorial(num){
+	if(num === 0){
+  	return 1
+  }
+  return num * Factorial(num-1)
+}
+console.log(Factorial(5))
