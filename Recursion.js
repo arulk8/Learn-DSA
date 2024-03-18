@@ -89,3 +89,14 @@ function reverseNumber(num){
 }
 
 console.log(reverseNumber(657))
+
+// plindrom of a string
+function Pal(str, s, e){
+	if(s >= e){
+  	return true
+  }
+	return str[s] === str[e] && Pal(str, s+1, e-1)
+}
+
+const str = 'assa'
+console.log(Pal(str, 0, str.length-1))
