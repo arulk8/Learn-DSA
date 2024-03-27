@@ -31,3 +31,16 @@ function navieMoveZero(a){
 
 const x = [1,0,0,9,5,6,0,7]
 console.log(navieMoveZero(x))
+
+// Move all the zeros to end
+// this uses two pointer method
+const x = [1,2,0,5,6,0,0,1,0]
+let count = 0
+for(let i=0; i< x.length; i++){
+	if(x[i] !== 0){
+  	[x[i], x[count]] = [x[count], x[i]]
+    count++
+  }
+}
+
+console.log(x)
